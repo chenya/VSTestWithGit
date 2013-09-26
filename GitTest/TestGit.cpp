@@ -5,7 +5,10 @@ int fib(int n);
 
 int fib(int n)
 {
-	return (n < 3) ? 1 : (fib(n-1) + fib(n - 2)) ;
+	if (n < 3)
+		return 1;
+
+	return ( fib(n - 1) + fib(n - 2) ) ;
 }
 
 
@@ -13,7 +16,7 @@ int main()
 {
 	cout << "Hello World" << endl;
 	
-	cout << "FIB 10:" << fib(10) << endl;
+	cout << "FIB 5:" << fib(5) << endl;
 
 	return 0;
 }
